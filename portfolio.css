@@ -31,10 +31,19 @@ body {
 
 .container{
   display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-gap:100px;
+  grid-template-columns: auto;
+  grid-gap: 100px;
+  padding: 1em;
+
+
+
+  justify-items: center;
+
 }
 
-.sketch-holder{
-  
+.sketch1{
+  width: 33%;
+  height: 25%;
+  background: rgba(255, 213, 70, 0.4);
+  border: 2px dashed rgba(236, 198, 48, 0.5);
 }

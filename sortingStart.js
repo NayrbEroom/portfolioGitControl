@@ -1,5 +1,5 @@
 bubbleSort = (inputArr) => {
-  
+
   //set initial length of array passed into function
   var len = inputArr.length;
 
@@ -24,9 +24,15 @@ bubbleSort = (inputArr) => {
   }
 
 
-
-
   return inputArr
 }
 
+
+
+
+
+
+
+
+//graphCreate([123,1241,1414,1231]);
 //console.log(bubbleSort([124,82,101,-26,6,12342]));

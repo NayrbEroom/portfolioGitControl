@@ -5,36 +5,69 @@
 
 let canvasSketch1 = function(controller) {
 
-  let canvasX = 100;
-  let canvasY = 100;
+  let testArray = [123,1415,1235,5686,1352];
+  let objWidth = 4;
+  let testButton;
+  let orderedArray = bubbleSort(testArray);
+
   controller.setup = function() {
-    controller.createCanvas(700,410);
+    canvControl = controller.createCanvas(700,410);
+    
+    console.log(orderedArray);
+
+
   };
 
   controller.draw = function() {
-    controller.background(0);
-    controller.fill(255);
-    controller.rect(canvasX,canvasY, 50, 50);
+
+    controller.background(104, 118, 145);
+
+
+    //controller.fill(255);
+    //you need to do .fill first before making a shape
+
+
   };
+
+  inputRect = (inputArr) => {
+
+
+
+  }
+
+
 };
 
 var myp5 = new p5(canvasSketch1, 'sketch1');
 
-let canvasSketch2 = function(controller) {
+let bubbleSortSketch = function(controller) {
 
-  let canvasX = 100;
-  let canvasY = 100;
   controller.setup = function() {
     controller.createCanvas(700,410);
   };
 
   controller.draw = function() {
-    controller.background(0);
-    controller.fill(255);
-    controller.rect(canvasX,canvasY, 50, 50);
+    controller.background(104, 118, 145);
+
 
   };
 };
 
 
-var myp5 = new p5(canvasSketch2, 'sketch2');
+var myp5 = new p5(bubbleSortSketch, 'sketch2');
+
+let testSketch = function(controller) {
+
+  controller.setup = function() {
+    controller.createCanvas(700,410);
+  };
+
+  controller.draw = function() {
+    controller.background(104, 118, 145);
+
+
+  };
+};
+
+
+var myp5 = new p5(testSketch, 'sketch3');

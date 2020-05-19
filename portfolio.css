@@ -28,6 +28,9 @@ body {
   line-height: 1.2em;
 }
 
+canvas {
+  border-radius: 20px;
+}
 
 .container{
   display: grid;
@@ -42,8 +45,5 @@ body {
 }
 
 .sketch1{
-  width: 33%;
-  height: 25%;
-  background: rgba(255, 213, 70, 0.4);
-  border: 2px dashed rgba(236, 198, 48, 0.5);
+  
 }

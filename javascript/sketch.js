@@ -6,21 +6,28 @@
 let canvasSketch1 = function(controller) {
 
   let testArray = [123,1415,1235,5686,1352];
+  let testArraySize = testArray.length;
   let objWidth = 4;
   let testButton;
   let orderedArray = bubbleSort(testArray);
 
   controller.setup = function() {
     canvControl = controller.createCanvas(700,410);
-    
+
     console.log(orderedArray);
 
 
   };
 
   controller.draw = function() {
-
+    let counter = 0;
     controller.background(104, 118, 145);
+
+    while(counter < 6) {
+      controller.fill(255);
+      controller.rect(30*counter, counter, 50, testArray[counter] );
+      counter++;
+    }
 
 
     //controller.fill(255);
@@ -29,9 +36,7 @@ let canvasSketch1 = function(controller) {
 
   };
 
-  inputRect = (inputArr) => {
-
-
+  visualSort = function(sortingMethod, inputArr) {
 
   }
 

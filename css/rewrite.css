@@ -1,0 +1,21 @@
+:root {
+  --defaultback:  white;
+  --navbar: #566573;
+}
+body, header {
+  background-color: var(--defaultback);
+  font-family: 'Source Code Pro', monospace;
+}
+ul, li {
+  list-style: none;
+  display: inline;
+}
+#home-button {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  display: block;
+  background: url("../images/icons8-top-menu-100.png") no-repeat;
+  width: 100px;
+  height: 100px;
+}

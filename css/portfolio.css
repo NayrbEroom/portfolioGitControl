@@ -1,15 +1,23 @@
+/* css default and variables*/
 :root {
   --defaultback:  white;
   --navbar: #566573;
 }
-
-
-body, header {
-  background-color: var(--defaultback);
-  font-family: 'Source Code Pro', monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
+  display: inline;
 }
 
+/* pfjs canvas control with css */
+canvas {
+  border-radius: 20px;
+}
 
+/* content cards */
 .card {
   height: 300px;
   width: 250px;
@@ -22,17 +30,11 @@ body, header {
   transform: rotate(0);
 
 }
-
 .card h1 {
   margin: 0;
   font-size: 90%;
   line-height: 1.2em;
 }
-
-canvas {
-  border-radius: 20px;
-}
-
 .container {
   display: grid;
   grid-template-columns: auto;
@@ -45,13 +47,88 @@ canvas {
 
 }
 
+
+/* navbar across website */
+#navbar::before {
+  /* sample-header::before */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+
+}
+#navbar {
+  /* sample-header */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+}
+#banner-image {
+  position: absolute;
+  /* adding some padding here because my image isnt as even on each side theres loads of whitespace on the right but none on the left */
+  padding-left: 3%;
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
+  max-width: 100%;
+  opacity: 0.8;
+  z-index: -1;
+
+}
+#banner-trim {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 40vh;
+  max-height: 40px;
+  background-color: var(--navbar);
+}
+.navbar-text{
+  /* sample-header-section */
+  position: relative;
+  color: white;
+  margin-left: 20vh;
+  margin-right: 20vh;
+  /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
+  /* good source of info https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/ */
+
+}
+#home-button{
+  width: 30px;
+  /* top: 4%;
+  left: 4%; */
+  position: relative;
+  /* border-style: inset;
+  border-radius: 15%;
+  border-color: var(--navbar); */
+
+}
+
+
+
+.body-content {
+  position: relative;
+  margin-left: 15vh;
+  margin-right: 15vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 50vh;
+
+  border-left-style: solid;
+  border-left-color: var(--navbar);
+  border-right-style: solid;
+  border-right-color: var(--navbar);
+
+}
+
+
 .logo {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-}
 
-.navbar-order {
-  width: 100%;
-  margin-right: 0;
-  color: var(--navbar);
 }

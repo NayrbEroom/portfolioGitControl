@@ -1,7 +1,7 @@
-:root {
+/* :root {
   --defaultback:  white;
   --navbar: #566573;
-}
+} */
 body, header {
   background-color: var(--defaultback);
   font-family: 'Source Code Pro', monospace;

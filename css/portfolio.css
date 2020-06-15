@@ -1,6 +1,6 @@
 /* default css */
 :root {
-  --tone2: rgba(86, 101, 115, .85);
+  --tone2: rgba(86, 101, 115, .75);
   --tone1: rgba(255, 255, 255, 0.2);
 }
 *, *::before, *::after {
@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 ul, li {
-  list-style: none;
+  /* list-style: none; */
   display: inline;
 }
 body {
@@ -17,7 +17,7 @@ body {
   font-weight: 300;
 }
 header {
-  height: 48px;
+  height: 12.75vw;
   background-image: url(../images/codebanner2.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,7 +32,7 @@ header a {
   color: white;
   text-decoration: none;
   font-size: 1em;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 header a:hover {
   color: #000;
@@ -40,19 +40,25 @@ header a:hover {
 header ul {
   background-color: var(--tone2);
   text-align: center;
-
-  position: fixed;
+  min-height: 2.75vw;
+  position: absolute;
   z-index: 999;
   width: 100%;
-  height: 5%;
-  top: 48px;
+  top: 10vw;
 }
 header li {
   margin-left: 1em;
   margin-bottom: 1em;
   font-size: 1.8em;
-  top: .8%;
+  height: 2vw;
+  padding-left: 5em;
 }
+.center-aligner {
+  padding-top: .5vw;
+
+}
+
+
 /* wast of space */
 /* #banner-image {
   position: fixed;
@@ -64,9 +70,18 @@ header li {
 
 
 /* for main content */
-.content {
-  height: 200vh;
+h1 {
   display: grid;
+  padding-left: 2rem;
+  padding-top: 1rem;
+
+}
+
+.content {
+  height: 6em;
+  display: grid;
+  padding-left: 2rem;
+  padding-top: .5rem;
 }
 
 

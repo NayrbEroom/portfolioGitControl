@@ -3,30 +3,74 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-html {
-  font-size: 10px;
-}
+
 ul, li {
   list-style: none;
+  padding: 0px;
+
 }
-body {
-  margin: 0;
-}
-header {
-  padding-left: 1rem;
-  padding-top: 1rem;
-}
+
 a {
   text-decoration: none;
+  color: #f9e0ae;
+
+}
+
+a:hover {
+  color: #fc8621;
 }
 
 /* end boilerplate */
 
 
-
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
 
 body {
   background: #282931;
-  font-size: 5rem;
-  font-family: 'Noto Serif', serif;
+  font-size: 1em;
+  font-family: 'Varela Round', sans-serif;
  }
+
+ h1 {
+   color: #fc8621;
+   padding: 0px;
+   margin: 0px;
+
+ }
+
+ /* TODO: https://css-tricks.com/using-svg/ */
+ h2 {
+   font-size: 1em;
+   color: #f9e0ae;
+   padding-top: 1em;
+   margin: 0px;
+   
+ }
+
+ ul {
+ }
+
+
+ li > a {
+   float: left;
+   padding-right: 5px;
+ }
+
+
+
+
+
+
+
+
+
+
+

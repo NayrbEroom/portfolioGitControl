@@ -1,0 +1,32 @@
+/* boilerplate */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+ul, li {
+  list-style: none;
+}
+body {
+  margin: 0;
+}
+header {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+a {
+  text-decoration: none;
+}
+
+/* end boilerplate */
+
+
+
+
+body {
+  background: #282931;
+  font-size: 5rem;
+  font-family: 'Noto Serif', serif;
+ }

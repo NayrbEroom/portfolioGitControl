@@ -1,4 +1,10 @@
 /* boilerplate */
+:root {
+  --background-color: #222831;
+  --text-color: #393e46;
+  --tri-color: #ffd369;
+
+}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -12,12 +18,12 @@ ul, li {
 
 a {
   text-decoration: none;
-  color: #f9e0ae;
+  color: var(--text-color);
 
 }
 
 a:hover {
-  color: #fc8621;
+  color: var(--tri-color);
 }
 
 /* end boilerplate */
@@ -31,16 +37,20 @@ a:hover {
     padding: 0 20px;
     box-sizing: border-box;
     overflow: auto;
+    margin-top: 2%;
+    /* border-bottom: .25em solid var(--tri-color);
+    border-radius: .15em; */
 }
 
 body {
-  background: #282931;
+  background: var(--background-color);
   font-size: 1em;
   font-family: 'Varela Round', sans-serif;
  }
 
  h1 {
-   color: #fc8621;
+   color: var(--tri-color)  ;
+   /*TODO change color it bad*/
    padding: 0px;
    margin: 0px;
 
@@ -49,20 +59,27 @@ body {
  /* TODO: https://css-tricks.com/using-svg/ */
  h2 {
    font-size: 1em;
-   color: #f9e0ae;
+   color: var(--text-color);
    padding-top: 1em;
    margin: 0px;
    
  }
 
- ul {
- }
-
-
  li > a {
    float: left;
    padding-right: 5px;
+   padding-left: 5px;
+   /* border-right: .15em solid var(--tri-color); */
  }
+
+ #start > a {
+   padding-left: 0px;
+ }
+
+
+
+
+/*TODO: much later will need to force css refresh https://stackoverflow.com/questions/2263096/css-file-not-refreshing-in-browser */
 
 
 

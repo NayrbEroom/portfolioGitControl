@@ -89,17 +89,17 @@
         <div class="col-sm-4" v-for="(item, index) in tokens">
           <div class="card widget-flat">
             <div class="card-body token-body">
-              <div class="float-right" style="color: #e0e0e0;cursor: pointer;">
-                <i class="material-icons">arrow_forward</i>
+              <div class="float-right">
+                <i>arrow_forward</i>
               </div>
-              <ul style="list-style: none; padding-left: 0;color: #e0e0e0;cursor: context-menu;">
+              <ul cursor: context-menu;>
                 <li class="font-weight-normal mt-0" v-html="item.channel"></li>
                 <li class="font-weight-normal mt-0" v-html="item.topic"></li>
               </ul>
-              <span class="mt-3 mb-3" style="color: #e0e0e0;cursor: context-menu;"><span style="font-size: 27px;" v-html="item.count"></span> <span style="font-size: 18px;">Active</span></span>
+              <span class="mt-3 mb-3"><span v-html="item.count"></span> <span>Active</span></span>
               <p class="mb-0">
                 <br>
-                <ul style="list-style: none; padding-left: 0;color: #e0e0e0;cursor: context-menu;">
+                <ul cursor: context-menu;>
                   <li class="font-weight-normal mt-0">
                     <span class="text-nowrap">Token No: <span style="font-size: 14px;" v-html="item.token"></span></span>
                   </li>
@@ -121,7 +121,7 @@
                     </span>
                   </li><br>
                   <li class="font-weight-normal mt-0 seeQues">
-                    <a>See Questions</a>
+                    <a class="carda">See Questions</a>
                   </li>
 
                 </ul>
@@ -134,17 +134,17 @@
         <div class="col-sm-4" v-for="(item, index) in tokens">
           <div class="card widget-flat">
             <div class="card-body token-body">
-              <div class="float-right" style="color: #e0e0e0;cursor: pointer;">
-                <i class="material-icons">arrow_forward</i>
+              <div class="float-right">
+                <i>arrow_forward</i>
               </div>
-              <ul style="list-style: none; padding-left: 0;color: #e0e0e0;cursor: context-menu;">
+              <ul cursor: context-menu;>
                 <li class="font-weight-normal mt-0" v-html="item.channel"></li>
                 <li class="font-weight-normal mt-0" v-html="item.topic"></li>
               </ul>
-              <span class="mt-3 mb-3" style="color: #e0e0e0;cursor: context-menu;"><span style="font-size: 27px;" v-html="item.count"></span> <span style="font-size: 18px;">Active</span></span>
+              <span class="mt-3 mb-3"><span v-html="item.count"></span> <span>Active</span></span>
               <p class="mb-0">
                 <br>
-                <ul style="list-style: none; padding-left: 0;color: #e0e0e0;cursor: context-menu;">
+                <ul cursor: context-menu;>
                   <li class="font-weight-normal mt-0">
                     <span class="text-nowrap">Token No: <span style="font-size: 14px;" v-html="item.token"></span></span>
                   </li>
@@ -166,7 +166,7 @@
                     </span>
                   </li><br>
                   <li class="font-weight-normal mt-0 seeQues">
-                    <a>See Questions</a>
+                    <a class="carda">See Questions</a>
                   </li>
 
                 </ul>

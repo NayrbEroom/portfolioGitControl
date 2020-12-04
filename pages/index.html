@@ -25,7 +25,10 @@
       <li id="start"><a href="http://bmooreportfolio.io/pages/resume.pdf" title="resume" target="_blank">Resume</a></li>
       <li><a href="https://github.com/NayrbEroom" title="github_link" target="_blank">Github</a></li>
       <li><a href="mailto: moorebryan21@gmail.com" title="email" target="_blank">Email</a></li>
-      <li><a href="http://bmooreportfolio.io/pages/resume.pdf" title="codepen" target="_blank">Codepen</a></li>
+      <!-- <li><a href="http://bmooreportfolio.io/pages/resume.pdf" title="codepen" target="_blank">Codepen</a></li>
+      <li><a href="mailto: moorebryan21@gmail.com" title="email" target="_blank">Email</a></li>
+      <li><a href="mailto: moorebryan21@gmail.com" title="email" target="_blank">Email</a></li> -->
+
     </ul>
 
   </div>
@@ -33,10 +36,147 @@
   <div id="vuecont">
     
     <div class="container">
-      <h2>Projects</h2>
-      <input class="form-control" type="text" v-model="searchQuery" placeholder="Search for a project" @keyup="resultQuery()" />
-    </div>
+        <h2>Projects</h2>
+        <input class="form-control" type="text" v-model="searchQuery" placeholder="Search for a project" @keyup="resultQuery()" />
 
+
+      <div class="row">
+        <div class="col-sm-4" v-for="(item, index) in tokens">
+          <div class="card widget-flat">
+            <div class="card-body token-body">
+              <div class="float-right">
+                <i>arrow_forward</i>
+              </div>
+              <ul cursor: context-menu;>
+                <li class="font-weight-normal mt-0" v-html="item.channel"></li>
+                <li class="font-weight-normal mt-0" v-html="item.topic"></li>
+              </ul>
+              <span class="mt-3 mb-3"><span v-html="item.count"></span> <span>Active</span></span>
+              <p class="mb-0">
+                <br>
+                <ul cursor: context-menu;>
+                  <li class="font-weight-normal mt-0">
+                    <span class="text-nowrap">Token No: <span style="font-size: 14px;" v-html="item.token"></span></span>
+                  </li>
+                  <li class="font-weight-normal mt-0">
+                    <span class="text-nowrap" v-html="`Date: ${item.created_time}`"></span>
+                  </li>
+                  <li class="font-weight-normal mt-0">Created:
+                    <span v-if="item.difference == 0" class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      Today
+                    </span>
+                    <span v-else-if="item.difference == 1" class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      Yesterday
+                    </span>
+                    <span v-else class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      <span v-html="item.difference"></span> Days Back
+                    </span>
+                  </li><br>
+                  <li class="font-weight-normal mt-0 seeQues">
+                    <a class="carda">See Questions</a>
+                  </li>
+
+                </ul>
+
+              </p>
+            </div> <!-- end card-body-->
+          </div>
+        </div><!-- end card-->
+
+        <div class="col-sm-4" v-for="(item, index) in tokens">
+          <div class="card widget-flat">
+            <div class="card-body token-body">
+              <div class="float-right" style="color: #e0e0e0;cursor: pointer;">
+                <i class="material-icons">arrow_forward</i>
+              </div>
+              <ul style="list-style: none; padding-left: 0;color: #e0e0e0;cursor: context-menu;">
+                <li class="font-weight-normal mt-0" v-html="item.channel"></li>
+                <li class="font-weight-normal mt-0" v-html="item.topic"></li>
+              </ul>
+              <span class="mt-3 mb-3" style="color: #e0e0e0;cursor: context-menu;"><span style="font-size: 27px;" v-html="item.count"></span> <span style="font-size: 18px;">Active</span></span>
+              <p class="mb-0">
+                <br>
+                <ul style="list-style: none; padding-left: 0;color: #e0e0e0;cursor: context-menu;">
+                  <li class="font-weight-normal mt-0">
+                    <span class="text-nowrap">Token No: <span style="font-size: 14px;" v-html="item.token"></span></span>
+                  </li>
+                  <li class="font-weight-normal mt-0">
+                    <span class="text-nowrap" v-html="`Date: ${item.created_time}`"></span>
+                  </li>
+                  <li class="font-weight-normal mt-0">Created:
+                    <span v-if="item.difference == 0" class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      Today
+                    </span>
+                    <span v-else-if="item.difference == 1" class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      Yesterday
+                    </span>
+                    <span v-else class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      <span v-html="item.difference"></span> Days Back
+                    </span>
+                  </li><br>
+                  <li class="font-weight-normal mt-0 seeQues">
+                    <a>See Questions</a>
+                  </li>
+
+                </ul>
+
+              </p>
+            </div> <!-- end card-body-->
+          </div>
+        </div><!-- end card-->
+        
+        <div class="col-sm-4" v-for="(item, index) in tokens">
+          <div class="card widget-flat">
+            <div class="card-body token-body">
+              <div class="float-right" style="color: #e0e0e0;cursor: pointer;">
+                <i class="material-icons">arrow_forward</i>
+              </div>
+              <ul style="list-style: none; padding-left: 0;color: #e0e0e0;cursor: context-menu;">
+                <li class="font-weight-normal mt-0" v-html="item.channel"></li>
+                <li class="font-weight-normal mt-0" v-html="item.topic"></li>
+              </ul>
+              <span class="mt-3 mb-3" style="color: #e0e0e0;cursor: context-menu;"><span style="font-size: 27px;" v-html="item.count"></span> <span style="font-size: 18px;">Active</span></span>
+              <p class="mb-0">
+                <br>
+                <ul style="list-style: none; padding-left: 0;color: #e0e0e0;cursor: context-menu;">
+                  <li class="font-weight-normal mt-0">
+                    <span class="text-nowrap">Token No: <span style="font-size: 14px;" v-html="item.token"></span></span>
+                  </li>
+                  <li class="font-weight-normal mt-0">
+                    <span class="text-nowrap" v-html="`Date: ${item.created_time}`"></span>
+                  </li>
+                  <li class="font-weight-normal mt-0">Created:
+                    <span v-if="item.difference == 0" class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      Today
+                    </span>
+                    <span v-else-if="item.difference == 1" class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      Yesterday
+                    </span>
+                    <span v-else class="mr-2" :class="whatClassIsIt(item.difference)">
+                      <i class="mdi mdi-arrow-up-bold"></i>
+                      <span v-html="item.difference"></span> Days Back
+                    </span>
+                  </li><br>
+                  <li class="font-weight-normal mt-0 seeQues">
+                    <a>See Questions</a>
+                  </li>
+
+                </ul>
+
+              </p>
+            </div> <!-- end card-body-->
+          </div>
+        </div><!-- end card-->
+      </div> <!-- end row -->
+    </div>
   </div>
  
 

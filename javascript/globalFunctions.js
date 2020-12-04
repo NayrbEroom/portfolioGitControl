@@ -15,7 +15,7 @@ function parallax_height() {
   $(".navbar").css({ height: navbar_height - scroll_top });
   //copied https://codepen.io/webmadewell/pen/zppMBX
 }
-parallax_height();
+$parallax_height();
 $(window).scroll(function() {
   parallax_height();
 });

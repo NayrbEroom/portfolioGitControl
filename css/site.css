@@ -128,6 +128,7 @@ li > a {
     text-align: left;
     display: inline-flex;
     flex-wrap: wrap;
+    
 
 
 }
@@ -135,7 +136,6 @@ li > a {
 .basic-card {
     width:280px;
     position: relative;
-    padding: 30px;
     margin: 20px;
     background-image: linear-gradient(to bottom right, #ffe4a5, #ffd369 );
     
@@ -146,19 +146,21 @@ li > a {
 }
 
 .card-content{
-
+  padding: 30px;
 }
 .card-title{
 
 }
 .card-text{
-
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 4em;
 }
 .card-link{
   width: -webkit-fill-available;
   width: -moz-available;
   border-top: 1px solid var(--background-color);
-  padding-top: 25px;
+  padding: 25px;
 
 }
 
@@ -167,9 +169,28 @@ li > a {
 
 }
 
-.card-link a:hover {
-  color: var(--text-color);
+.basic-card .card-link a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  width: 0;
+  background: var(--background-color);
+
+
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+
 }
+
+.basic-card .card-link a:hover:after {
+  width: 5rem; 
+  left: 22px; 
+}
+
 
 
 

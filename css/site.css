@@ -33,8 +33,9 @@ a:hover {
 .container {
     position: relative;
     max-width: 960px;
-    margin: 0 auto;
+    margin: 35px auto;
     text-align: left;
+    
     /* border-bottom: .25em solid var(--text-color-two);
     border-radius: .15em; */
 
@@ -123,8 +124,10 @@ li > a {
 .card-container {
     position: relative;
     max-width: 960px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: left;
+    display: inline-flex;
+    flex-wrap: wrap;
 
 
 }
@@ -133,6 +136,7 @@ li > a {
     width:280px;
     position: relative;
     padding: 30px;
+    margin: 20px;
     background-image: linear-gradient(to bottom right, #ffe4a5, #ffd369 );
     
     -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
@@ -158,6 +162,14 @@ li > a {
 
 }
 
+.card-link a {
+  color: var(--background-color);
+
+}
+
+.card-link a:hover {
+  color: var(--text-color);
+}
 
 
 

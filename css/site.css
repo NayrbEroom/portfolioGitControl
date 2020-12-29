@@ -1,3 +1,6 @@
+/* TODO: for some reason codepen when you resize the cards automatically get smaller but this does not work in regular html/css need to find out a way to have cards
+wrap around screen when in smaller formats such as mobile. IE mobile first design */
+
 /* boilerplate */
 :root {
   --background-color: #222831;
@@ -31,13 +34,10 @@ a:hover {
 
 
 .container {
-    position: relative;
     max-width: 960px;
     margin: 35px auto;
     text-align: left;
     
-    /* border-bottom: .25em solid var(--text-color-two);
-    border-radius: .15em; */
 
 }
 
@@ -45,6 +45,7 @@ body {
   background: var(--background-color);
   font-size: 1em;
   font-family: 'Varela Round', sans-serif;
+  margin: 0px;
  }
 
 h1 {
@@ -69,7 +70,6 @@ li > a {
   float: left;
   padding-right: 5px;
   padding-left: 5px;
-  /* border-right: .15em solid var(--text-color-two); */
 
 }
 
@@ -100,7 +100,6 @@ li > a {
 }
 
 .form-control {
-    position: relative;
     display: block;
     width: 100%;
     max-width: 960px;
@@ -122,15 +121,18 @@ li > a {
 /* cards */
 
 .card-container {
-    position: relative;
     max-width: 960px;
-    margin: 20px auto;
     text-align: left;
-    display: inline-flex;
-    flex-wrap: wrap;
-    
 
+}
 
+.card-container div {
+  display: inline-block;
+}
+
+.card-container > div {
+  margin: 20px 1em;
+  text-align: left;
 }
 
 .basic-card {
@@ -195,7 +197,7 @@ li > a {
 
 
 
-/* else */
+/* end cards */
 
 ul > span, p {
   color: var(--background-color);

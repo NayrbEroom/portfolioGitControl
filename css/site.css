@@ -227,7 +227,7 @@ ul > span, p {
   border-radius: 50%;
   background: var(--text-color-two);
   transform: scale(0);
-  position: absolute;
+  position: relative;
   opacity: 0.7;
   overflow: hidden;
 }

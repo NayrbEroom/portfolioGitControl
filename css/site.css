@@ -3,9 +3,9 @@ wrap around screen when in smaller formats such as mobile. IE mobile first desig
 
 /* boilerplate */
 :root {
-  --background-color: #222831;
-  --text-color: #eeeeee;
-  --text-color-two: #ffd369;
+  --background-color: #C4C4C4;
+  --text-color: black;
+  --text-color-two: black;
 
 }
 
@@ -16,6 +16,7 @@ wrap around screen when in smaller formats such as mobile. IE mobile first desig
 ul, li {
   list-style: none;
   padding: 0px;
+  display: inline;
 
 }
 
@@ -32,15 +33,6 @@ a:hover {
 
 /* end boilerplate */
 
-
-.container {
-    max-width: 960px;
-    margin: 35px auto;
-    text-align: left;
-    
-
-}
-
 body {
   background: var(--background-color);
   font-size: 1em;
@@ -49,11 +41,13 @@ body {
  }
 
 h1 {
-  font-size: 2.5em;
-  color: var(--text-color-two)  ;
-  /*TODO change color it bad*/
+  font-size: 2em;
+  color: var(--text-color-two);
   padding: 0px;
   margin: 0px;
+  line-height: 19px;
+  text-transform: uppercase;
+
 
 }
 
@@ -73,169 +67,69 @@ li > a {
 
 }
 
-#start > a {
-  padding-left: 0px;
-
-}
-
-.button {
-    box-sizing: border-box;
-    background-color: initial;
-    border: 0;
-    border-radius: 0;
-    box-shadow: inset 0 0 0 2px #fff;
-    color: var(--text-color);
-    cursor: pointer;
-    display: inline-block;
-    font-size: .8em;
-    font-weight: 600;
-    height: 3.5em;
-    letter-spacing: .25em;
-    line-height: 3.5em;
-    padding: 0 1.75em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    max-width: 960px;
-    height: calc(1em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--background-color);
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid var(--background-color);
-    border-radius: .25rem;
-    margin: 0 auto;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
-}
-
-/* cards */
-
-.card-container {
-    max-width: 960px;
-    text-align: left;
-
-}
-
-.card-container div {
-  display: inline-block;
-}
-
-.card-container > div {
-  margin: 20px 1em;
-  text-align: left;
-}
-
-.basic-card {
-    width:280px;
-    position: relative;
-    margin: 20px;
-    background-image: linear-gradient(to bottom right, #ffe4a5, #ffd369 );
-    
-    -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 10px 10px 0px  rgba(0,0,0,0.3);
-    -o-box-shadow: 0px 10px 10px 0px  rgba(0,0,0,0.3);
-    box-shadow: 0px 10px 10px 0px  rgba(0,0,0,0.3);
-}
-
-.card-content{
-  padding: 30px;
-}
-.card-title{
-
-}
-.card-text{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 4em;
-}
-.card-link{
-  width: -webkit-fill-available;
-  width: -moz-available;
-  border-top: 1px solid var(--background-color);
-  padding: 25px;
-
-}
-
-.card-link a {
-  color: var(--background-color);
-
-}
-
-.basic-card .card-link a:after {
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  width: 0;
-  background: var(--background-color);
-
-
-  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-
-}
-
-.basic-card .card-link a:hover:after {
-  width: 5rem; 
-  left: 22px; 
-}
-
-
-
-
-
-/* end cards */
-
-ul > span, p {
-  color: var(--background-color);
+.content-container {
+  width: 60%;
+  background-color: #ffffff;
+  margin-left: 20%;
+  margin-right: 20%;
 
 }
 
 
-.seeQues {
-  cursor: pointer;
-  color: #fff;
-  padding: 3px 6px;
-  transition: color 0.6s ease;
+header {
+  background-color: #ffffff;
+  top: 0;
+  width: 100%;
+  min-height: 101px;
+  max-height: 101px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.page-title {
   text-align: center;
-  margin-bottom: 7px;
+  text-indent: 1px;
+
+  height: 50%;
+
 }
 
-.token-body:hover .seeQues {
-  background-color: var(--text-color-two);
-  color: var(--text-color);
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
 
-  
-} /* remove this weird rectangle in middle of card */
-
-.token-body:hover .ripple {
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: var(--text-color-two);
-  transform: scale(0);
-  position: relative;
-  opacity: 0.7;
-  overflow: hidden;
 }
 
-.rippleEffect {
-  animation: rippleDrop 0.6s linear;
-  overflow: hidden;
+header > h1 {
+  margin: 20px;
 }
+
+.page-link {
+  display: flex;
+  background: #33383E;
+  fill: #ffffff;
+
+}
+
+.sticky{
+  position: fixed;
+  width: 60%;
+
+}
+
+
+
+main {
+  height: 3160px;
+
+}
+
+
+
 /*TODO: ugh.. heres the parallax  (do the parallax)*/
 
 /*TODO: much later will need to force css refresh https://stackoverflow.com/questions/2263096/css-file-not-refreshing-in-browser */

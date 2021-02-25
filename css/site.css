@@ -4,10 +4,12 @@ wrap around screen when in smaller formats such as mobile. IE mobile first desig
 /* boilerplate */
 :root {
   --background-color: #C4C4C4;
+  --background-color-two: rgba(239, 79, 79, 0.8);
   --text-color: black;
   --text-color-two: black;
 
 }
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -63,16 +65,13 @@ h2 {
 
 
 
-.content-container {
-  width: 60%;
-  background-color: #ffffff;
-  margin-left: 20%;
-  margin-right: 20%;
 
+
+a {
+  text-decoration: none;
 }
 
-
-header {
+.container {
   background-color: #ffffff;
   position: absolute;
   left: 2.55%;
@@ -82,42 +81,69 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
 }
 
-nav {
+.child {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
 }
-nav > ul {
-  background-color: #ef4f4f;
+
+.child:first-child {
+  margin-top: 30%;
 }
 
-nav  a {
-  padding-left: 100%;  
-  padding-right: 100%;
-}
-
-header > h1 {
-  margin: 20px;
-}
-
-.page-link {
+.child a {
   text-align: center;
-
+  border: solid .25px;
+  background-color: var(--background-color-two);
+  width: 100%;
+  height: 2rem;
+  padding-top: .5em;
 }
-
 
 
 
 main {
-  height: 3160px;
+  
+  
 
+}
+
+.content-container {
+  position: absolute;
+  top: 2.5%;
+  width: 60%;
+  height: 3000px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+
+}
+
+.content-container p {
+  display: block;
+  margin: 4em;
+
+
+}
+
+.profpic {
+  background-image: url(images/stockprofimage.jpg);
+  width: 220px;
+  height: auto;
+}
+
+s {
+  display: inline-block;
 }
 
 

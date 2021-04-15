@@ -1,78 +1,63 @@
+// save this file as sketch.js
+// Sketch One
+// var sketch1 = function( controller ) { // p could be any variable name
+//   var x = 100; 
+//   var y = 100;
+//   controller.setup = function() {
+//     controller.createCanvas(400, 200);
+//   };
 
-//assign it like a variable so you can do multiple sketches in one file
-//it will also allow me to control the canvas with html/css
-//instructions for assigning multiple sketches: http://www.joemckaystudio.com/multisketches/
+//   controller.draw = function() {
+//     controller.background(0);
+//     controller.fill(255);
+//     controller.rect(x,y,50,50);
+//   };
+// };
+// var myp5 = new p5(sketch1, 'sketch1');
 
-let canvasSketch1 = function(controller) {
+// // Sketch Two
+// var sketch2 = function( controller ) { 
+//   var x = 100.0; 
+//   var y = 100; 
+//   var speed = 2.5; 
+//   controller.setup = function() {
+//     controller.createCanvas(400, 200);
+//   };
 
-  let testArray = [123,1415,1235,5686,1352];
-  let testArraySize = testArray.length;
-  let objWidth = 4;
-  let testButton;
-  let orderedArray = bubbleSort(testArray);
+//   controller.draw = function() {
+//     controller.background(100);
+//     controller.fill(1);
+//     x += speed; 
+//     if(x > controller.width){
+//       x = 0; 
+//     }
+//     controller.ellipse(x,y,50,50);
 
-  controller.setup = function() {
-    canvControl = controller.createCanvas(700,410);
+//   };
+// };
+// var myp5 = new p5(sketch2, 'sketch2');
 
-    console.log(orderedArray);
+var sketch3 = function( controller ) {
 
-
-  };
-
-  controller.draw = function() {
-    let counter = 0;
-    controller.background(104, 118, 145);
-
-    while(counter < 6) {
-      controller.fill(255);
-      controller.rect(30*counter, counter, 50, testArray[counter] );
-      counter++;
+    let contentContainerWidth = controller.windowWidth * .60;
+    
+    controller.setup = function () {
+        controller.createCanvas(contentContainerWidth, 100);
+        controller.background('grey');
+        let inp = controller.createInput('');
+        inp.position(0, 0);
+        inp.size(100);
+        inp.input(myInputEvent);
     }
 
+    controller.draw = function () {
+        console.log('you are typing: ', this.value());
+    }
+}
 
-    //controller.fill(255);
-    //you need to do .fill first before making a shape
-
-
-  };
-
-  visualSort = function(sortingMethod, inputArr) {
-
-  }
+function myInputEvent() {
+  console.log('you are typing: ', this.value());
+}
 
 
-};
-
-var myp5 = new p5(canvasSketch1, 'sketch1');
-
-let bubbleSortSketch = function(controller) {
-
-  controller.setup = function() {
-    controller.createCanvas(700,410);
-  };
-
-  controller.draw = function() {
-    controller.background(104, 118, 145);
-
-
-  };
-};
-
-
-var myp5 = new p5(bubbleSortSketch, 'sketch2');
-
-let testSketch = function(controller) {
-
-  controller.setup = function() {
-    controller.createCanvas(700,410);
-  };
-
-  controller.draw = function() {
-    controller.background(104, 118, 145);
-
-
-  };
-};
-
-
-var myp5 = new p5(testSketch, 'sketch3');
+var myp5 = new p5(sketch3, 'sketch3');

@@ -166,6 +166,19 @@ s {
 
 
 
+/* p5js stuff */
+
+.p5-canvas {
+  padding: 2em;
+  margin-left: 13%;
+}
+
+
+
+
+/* p5js stuff end */
+
+
 
 /*TODO: ugh.. heres the parallax  (do the parallax)*/
 
